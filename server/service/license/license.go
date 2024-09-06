@@ -216,6 +216,13 @@ func getSubscriptionForFreePlan() *v1pb.Subscription {
 		Seats:            5,
 		ShortcutsLimit:   100,
 		CollectionsLimit: 5,
-		Features:         []string{},
+		Features: []string{
+			FeatureTypeUnlimitedAccounts.String(),
+			FeatureTypeUnlimitedShortcuts.String(),
+			FeatureTypeUnlimitedCollections.String(),
+			FeatureTypeCustomeBranding.String(),
+			FeatureTypeSSO.String(),
+			FeatureTypeAdvancedAnalytics.String(),
+		},
 	}
 }
